@@ -1,0 +1,49 @@
+
+***************************************************************************************************************
+* create material                                                                                             *
+* https://2eegcv41xj.execute-api.us-east-1.amazonaws.com/prod/material                                        *
+***************************************************************************************************************
+{
+  "operation": "create",
+  "TableName": "material",
+  "Item": { 
+     "code": "ALPRFQ30KG0800000000",
+     "description": "ACO LAMINADO FINA FRIO ROLO 30KG FITA 80MM ESP 2,00MM",
+     "measures": [
+        { "measure": "comprimento", "unit": "mm", "value": "p / (largura * espessura * densidade)" },
+        { "measure": "largura", "unit": "mm", "value": "80.00000" },
+        { "measure": "espessura", "unit": "mm", "value": "2.00000" },
+        { "measure": "densidade", "unit": "kg/mm^3", "value": "0.000007856" },
+        { "measure": "peso", "unit": "mm", "value": "comprimento * largura * espessura * densidade" }
+        
+     ]
+   }
+}
+
+***************************************************************************************************************
+* read material                                                                                               * 
+* https://2eegcv41xj.execute-api.us-east-1.amazonaws.com/prod/material                                        *
+***************************************************************************************************************
+{
+  "operation": "read",   
+  "TableName": "material",
+  "Key": {"code": "ALPRFQ30KG0800000000"}
+}
+
+***************************************************************************************************************
+* material-measure                                                                                            *
+*                                                                                                             *
+***************************************************************************************************************
+
+{ 
+     "code": "ALPRFQ30KG0240000000",
+     "description": "ACO LAMINADO FINA FRIO ROLO 30KG FITA 240MM ESP 2,00MM",
+     "measures": [
+        { "measure": "comprimento", "unit": "mm", "expression": "p / (largura * espessura * densidade)" },
+        { "measure": "largura", "unit": "mm", "expression": "80.00000" },
+        { "measure": "espessura", "unit": "mm", "expression": "2.00000" },
+        { "measure": "densidade", "unit": "kg/mm^3", "expression": "0.000007856" },
+        { "measure": "peso", "unit": "mm", "expression": "comprimento * largura * espessura * densidade" }
+        
+     ]
+   }
